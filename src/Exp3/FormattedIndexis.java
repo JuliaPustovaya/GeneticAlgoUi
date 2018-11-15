@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import static Exp3.Coefficients.*;
 import static Exp3.InitialIndexis.*;
-import static sample.Main.timeSeria;
-import static sample.Main.updatedTimeSerias;
+import static sample.Controller.timeSeria;
+import static sample.Controller.updatedTimeSerias;
 
 public class FormattedIndexis {
 	public ArrayList formSt(int t) {

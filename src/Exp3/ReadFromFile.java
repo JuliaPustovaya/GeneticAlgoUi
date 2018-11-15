@@ -1,5 +1,7 @@
 package Exp3;
 
+import sample.Controller;
+
 import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
@@ -38,6 +40,7 @@ public class ReadFromFile {
         dialog.setVisible(true);
         String file = dialog.getFile();
         System.out.println("Имя файла: "+file);
+        Controller.globalFilePath=file;
         readDataFromFile(dialog.getDirectory() + file, listForTimeSeria, listOfRealValue);
     }
 }

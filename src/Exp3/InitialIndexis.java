@@ -3,7 +3,7 @@ package Exp3;
 import java.util.ArrayList;
 
 import static Exp3.Coefficients.L;
-import static sample.Main.timeSeria;
+import static sample.Controller.timeSeria;
 
 public class InitialIndexis {
 	public static Double S0 = 0.0;

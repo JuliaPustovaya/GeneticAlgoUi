@@ -2,8 +2,8 @@ package Exp3;
 
 import java.text.DecimalFormat;
 
-import static sample.Main.timeSeria;
-import static sample.Main.updatedTimeSerias;
+import static sample.Controller.timeSeria;
+import static sample.Controller.updatedTimeSerias;
 
 public class UpdatedTimeSeria {
 

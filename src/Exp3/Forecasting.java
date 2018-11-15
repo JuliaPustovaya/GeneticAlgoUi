@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import static Exp3.Coefficients.L;
-import static sample.Main.forecastResult;
+import static sample.Controller.forecastResult;
 
 public class Forecasting {
 

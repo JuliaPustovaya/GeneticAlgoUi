@@ -1,6 +1,6 @@
 package Exp3;
 
-import static sample.Main.*;
+import static sample.Controller.*;
 
 public class Cleaning {
 	public static void cleanVaribles() {
