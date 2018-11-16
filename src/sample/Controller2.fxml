@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.chart.*?>
 <?import java.lang.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane fx:id="anchore" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <LineChart fx:id="lineChart" layoutY="5.0" prefHeight="391.0" prefWidth="418.0">
-        <xAxis>
-          <NumberAxis side="BOTTOM" fx:id="xAxis" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis fx:id="yAxis" side="LEFT" />
-        </yAxis>
-      </LineChart>
-      <Button fx:id="forecast" layoutX="461.0" layoutY="58.0" mnemonicParsing="false" onAction="#getForecast" text="Получить расчет" />
-      <TextField fx:id="textFieldL" layoutX="441.0" layoutY="22.0" />
-   </children>
+<AnchorPane fx:id="anchore" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="721.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <children>
+    <LineChart fx:id="lineChart" layoutX="7.0" layoutY="14.0" prefHeight="307.0" prefWidth="531.0">
+      <xAxis>
+        <NumberAxis fx:id="xAxis" side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis fx:id="yAxis" side="LEFT" />
+      </yAxis>
+    </LineChart>
+    <Button fx:id="forecast" layoutX="575.0" layoutY="58.0" mnemonicParsing="false" onAction="#getForecast" text="Получить расчет" />
+    <TextField fx:id="textFieldL" layoutX="555.0" layoutY="22.0" />
+  </children>
 </AnchorPane>
