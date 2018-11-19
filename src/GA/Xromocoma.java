@@ -1,5 +1,7 @@
 package GA;
 
+import java.text.DecimalFormat;
+
 public class Xromocoma {
 	private Double alfa;
 	private Double betta;
@@ -8,9 +10,9 @@ public class Xromocoma {
 	@Override
 	public String toString() {
 		return "Xromocoma{" +
-				"alfa=" + alfa +
-				", betta=" + betta +
-				", gamma=" + gamma +
+				"alfa= " + new DecimalFormat("#0.00").format(alfa)+
+				" ;betta= " + new DecimalFormat("#0.00").format(betta)+
+				" ;gamma= " + new DecimalFormat("#0.00").format(gamma)+
 				'}';
 	}
 

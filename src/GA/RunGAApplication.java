@@ -30,5 +30,9 @@ public class RunGAApplication {
 		Population.makeRandomPopulation();
 		System.out.println(Population.populationXromocoma);
 		Population.makeRuletSelection();
+		Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
+		Crossover crossover= new Crossover();
+		crossover.getChidrenPairsOnePointCrossover(Selection.parentsPairsForSelections);
+
 	}
 }
