@@ -1,8 +1,9 @@
 package GA;
 
+import static GA.Crossover.childrenListAfterCrossover;
+
 import java.util.ArrayList;
 
-import Exp3.InitialIndexis;
 import Exp3.TimeSeria;
 import Exp3.UpdatedTimeSeria;
 
@@ -16,25 +17,23 @@ public class RunGAApplication {
 		return Math.random();
 	}
 
-
 	public static void main(String[] args) throws Exception {
 		//	ReadFromFile.openFile(timeSeria);
-//		InitialIndexis initialIndexis = new InitialIndexis();
-//		initialIndexis.formS0();
-//		System.out.println("s0 " + initialIndexis.getS0());
-//		initialIndexis.formB0();
-//		System.out.println("b0 " + initialIndexis.getB0());
-//		initialIndexis.formC0();
-//		System.out.println("c0 " + initialIndexis.getC0());
-
+		//		InitialIndexis initialIndexis = new InitialIndexis();
+		//		initialIndexis.formS0();
+		//		System.out.println("s0 " + initialIndexis.getS0());
+		//		initialIndexis.formB0();
+		//		System.out.println("b0 " + initialIndexis.getB0());
+		//		initialIndexis.formC0();
+		//		System.out.println("c0 " + initialIndexis.getC0());
 		Population.makeRandomPopulation();
 		System.out.println(Population.populationXromocoma);
 		Population.makeRuletSelection();
 		Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
-
-//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);
-//		Crossover.getChidrenPairsFlatCrossover(Selection.parentsPairsForSelections);
-//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
-	Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
+		//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);
+		//		Crossover.getChidrenPairsFlatCrossover(Selection.parentsPairsForSelections);
+		//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
+		Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
+		Mutation.RandomMutation(childrenListAfterCrossover);
 	}
 }
