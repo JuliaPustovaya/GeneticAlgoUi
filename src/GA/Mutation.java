@@ -4,7 +4,7 @@ import static GA.GAparametrs.POPULATION;
 
 import java.util.ArrayList;
 import java.util.Random;
-
+               
 public class Mutation {
 	public static ArrayList<Xromocoma> childrenAfterMutation = new ArrayList<Xromocoma>();
 
