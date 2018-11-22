@@ -39,4 +39,14 @@ public class Xromocoma {
 	public void setGamma(Double gamma) {
 		this.gamma = gamma;
 	}
+
+	public Xromocoma(Double alfa, Double betta, Double gamma) {
+		this.alfa = alfa;
+		this.betta = betta;
+		this.gamma = gamma;
+	}
+
+	public Xromocoma() {
+
+	}
 }
