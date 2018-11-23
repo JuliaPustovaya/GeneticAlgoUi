@@ -24,7 +24,8 @@ public class Mutation {
 			}
 		}
 		System.out.println("Модифицированные потомки " + list);
-		return list;
+		childrenAfterMutation.addAll(list);
+		return childrenAfterMutation;
 	}
 
 	public static double getModifiedGene(double value, int numberOfCurrentXromocoma) {

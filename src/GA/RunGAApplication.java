@@ -27,13 +27,16 @@ public class RunGAApplication {
 		//		initialIndexis.formC0();
 		//		System.out.println("c0 " + initialIndexis.getC0());
 		Population.makeRandomPopulation();
-		System.out.println(Population.populationXromocoma);
+
 		Population.makeRuletSelection();
 		Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
 		//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);
+
 		//		Crossover.getChidrenPairsFlatCrossover(Selection.parentsPairsForSelections);
 		//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
 		Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
 		Mutation.RandomMutation(childrenListAfterCrossover);
+
+		NewPopulation.selectXromocomaInNewPopulation(NewPopulation.formNewPopulation(Population.populationXromocoma, Mutation.childrenAfterMutation));
 	}
 }
