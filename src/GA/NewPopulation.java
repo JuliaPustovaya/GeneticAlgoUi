@@ -6,7 +6,7 @@ import static GA.RunGAApplication.getFitness;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
-
+                                
 public class NewPopulation {
 	public static ArrayList<Xromocoma> selectedXromocomaInNewPopulation = new ArrayList<>();
 
