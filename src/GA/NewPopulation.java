@@ -5,8 +5,10 @@ import static GA.RunGAApplication.getFitness;
 
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.TreeMap;
-                                
+import java.util.TreeMap;        
+
+
+
 public class NewPopulation {
 	public static ArrayList<Xromocoma> selectedXromocomaInNewPopulation = new ArrayList<>();
 
@@ -15,7 +17,7 @@ public class NewPopulation {
 		generalList.addAll(parents);
 		generalList.addAll(children);
 		//		System.out.println("Хромосомы:дети+родители: ");
-		//		for (int i = 0; i < generalList.size(); i++) {                                       
+		//		for (int i = 0; i < generalList.size(); i++) {
 		//			System.out.println(generalList.get(i));
 		//		}
 		return generalList;
