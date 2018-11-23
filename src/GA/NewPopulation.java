@@ -15,7 +15,7 @@ public class NewPopulation {
 		generalList.addAll(parents);
 		generalList.addAll(children);
 		//		System.out.println("Хромосомы:дети+родители: ");
-		//		for (int i = 0; i < generalList.size(); i++) {
+		//		for (int i = 0; i < generalList.size(); i++) {                                       
 		//			System.out.println(generalList.get(i));
 		//		}
 		return generalList;
