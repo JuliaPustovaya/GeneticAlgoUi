@@ -4,15 +4,16 @@ import static GA.Crossover.childrenListAfterCrossover;
 
 public class RunGAApplication {
 
-	public static double getFitness(double alfa, double beta, double gama) {
+	/*public static double getFitness(double alfa, double beta, double gama) {
 		return Math.random();
 	}
+*/
 
 	public static void main(String[] args) throws Exception {
 		Population.makeRandomPopulation();
 		//TODO кол-во итераций отбора детей
 		for (int i = 0; i < 20; i++) {
-			CleanStaticVariables.cleanStaticVariables();
+
 			Population.makeRuletSelection();
 			Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
 			//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);

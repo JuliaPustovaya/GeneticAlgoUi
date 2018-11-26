@@ -29,7 +29,7 @@ public class RunApplication {
 		getUpdatedTimeSeria();
 		WriteToFile.writeToFile(updatedTimeSerias, "Updated St, Bt, Ct");
 		Forecasting forecasting = new Forecasting();
-		forecasting.getForecastedValues(updatedTimeSerias, 10);
+		forecasting.getForecastedValues(updatedTimeSerias, 4);
 		printForecastedValues(forecastResult);
 		WriteToFile.writeToFile(forecastResult, "Forecasted values : ");
 		//	ErrorCoeficients.getMSE(realResult, forecastResult);

@@ -10,6 +10,7 @@ public class Mutation {
 	public static ArrayList<Xromocoma> childrenAfterMutation = new ArrayList<>();
 
 	public static ArrayList<Xromocoma> RandomMutation(ArrayList<Xromocoma> list) {
+		childrenAfterMutation.clear();
 		for (int i = 0; i < list.size(); i++) {
 			if (new Random().nextDouble() > PROBALITY_MUTATON) {
 				Random random = new Random();

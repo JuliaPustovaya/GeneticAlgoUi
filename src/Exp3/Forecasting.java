@@ -11,7 +11,6 @@ public class Forecasting {
     public ArrayList<Double> getForecastedValues(ArrayList<UpdatedTimeSeria> StList, int m) {
         int t = StList.size();
         for (int i = 1; i <= m; i++) {
-            //	int m1 = ((t - L + i) > t) ? ((t - L + i) % L) : (t - L + i);
             int m1 = 0;
             if ((t - L + i) > t) {
                 if (((t - L + i) % L) != 0) {

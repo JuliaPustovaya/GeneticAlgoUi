@@ -31,6 +31,17 @@ public class BuildingCharts {
         seriaRealElemets.setName("Исходные данные для сравнения результата прогноза ");
     }
 
+    public static void buildChart(LineChart linechart, ArrayList<TimeSeria> timeSeriaElements) {
+        linechart.getData().clear();
+        XYChart.Series seriaTimeSeria = new XYChart.Series();
+        for (int i = 0; i < timeSeriaElements.size(); i++) {
+            seriaTimeSeria.getData().add(new XYChart.Data(i, timeSeriaElements.get(i).getYt()));
+        }
+        int j = 0;
+        linechart.getData().add(seriaTimeSeria);
+        seriaTimeSeria.setName("Исходный временной ряд");
+
+    }
 }
 
 

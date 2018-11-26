@@ -13,6 +13,7 @@ public class Crossover {
 	 * Возвращает два потомка
 	 **/
 	public static ArrayList<Xromocoma> getChidrenPairsTwoPointCrossover(ArrayList<ArrayList<Xromocoma>> pairsForSelections) {
+		childrenListAfterCrossover.clear();
 		System.out.println("Результат кроссовера Two-point Crossover ");
 		Xromocoma child1;
 		Xromocoma child2;
@@ -40,6 +41,7 @@ public class Crossover {
 	 * Возвращает одного потомка
 	 */
 	public static ArrayList<Xromocoma> getChidrenPairsFlatCrossover(ArrayList<ArrayList<Xromocoma>> pairsForSelections) {
+		childrenListAfterCrossover.clear();
 		System.out.println("Результат Flat Crossover(FC)");
 		Xromocoma child1;
 		Xromocoma xromocomaParent1;
@@ -76,6 +78,7 @@ public class Crossover {
 	 * Возвращает два потомка
 	 */
 	public static ArrayList<Xromocoma> getChidrenPairsArithmaticalCrossover(ArrayList<ArrayList<Xromocoma>> pairsForSelections) {
+		childrenListAfterCrossover.clear();
 		System.out.println("Результат Arithmatical Crossover(AC)");
 		Xromocoma child1;
 		Xromocoma child2;
@@ -117,6 +120,7 @@ public class Crossover {
 	 * Возвращает одного потомка
 	 */
 	public static ArrayList<Xromocoma> getChidrenPairsDiscreteCrossover(ArrayList<ArrayList<Xromocoma>> pairsForSelections) {
+		childrenListAfterCrossover.clear();
 		System.out.println("Результат Discrete Crossover(DC)");
 		Xromocoma child1;
 		Xromocoma xromocomaParent1;

@@ -8,6 +8,7 @@ public class Selection {
     public static ArrayList<ArrayList<Xromocoma>> parentsPairsForSelections = new ArrayList<>();
 
     public  static ArrayList<ArrayList<Xromocoma>> getParentsPairsForSelections(ArrayList<Xromocoma> selectedXromocoms) {
+        parentsPairsForSelections.clear();
         for (int i = 0; i < selectedXromocoms.size(); i++) {
             Random random = new Random();
             int numberParent1 = random.nextInt(selectedXromocoms.size());
