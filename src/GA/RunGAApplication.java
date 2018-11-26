@@ -2,41 +2,25 @@ package GA;
 
 import static GA.Crossover.childrenListAfterCrossover;
 
-import java.util.ArrayList;
-
-import Exp3.TimeSeria;
-import Exp3.UpdatedTimeSeria;
-
 public class RunGAApplication {
-	public static ArrayList<TimeSeria> timeSeria = new ArrayList<TimeSeria>();
-	public static ArrayList<UpdatedTimeSeria> updatedTimeSerias = new ArrayList<UpdatedTimeSeria>();
-	public static ArrayList<Double> forecastResult = new ArrayList<>();
 
-	//
 	public static double getFitness(double alfa, double beta, double gama) {
 		return Math.random();
 	}
 
 	public static void main(String[] args) throws Exception {
-		//	ReadFromFile.openFile(timeSeria);
-		//		InitialIndexis initialIndexis = new InitialIndexis();
-		//		initialIndexis.formS0();
-		//		System.out.println("s0 " + initialIndexis.getS0());
-		//		initialIndexis.formB0();
-		//		System.out.println("b0 " + initialIndexis.getB0());
-		//		initialIndexis.formC0();
-		//		System.out.println("c0 " + initialIndexis.getC0());
 		Population.makeRandomPopulation();
-
-		Population.makeRuletSelection();
-		Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
-		//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);
-
-		//		Crossover.getChidrenPairsFlatCrossover(Selection.parentsPairsForSelections);
-		//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
-		Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
-		Mutation.RandomMutation(childrenListAfterCrossover);
-
-		NewPopulation.selectXromocomaInNewPopulation(NewPopulation.formNewPopulation(Population.populationXromocoma, Mutation.childrenAfterMutation));
+		for (int i = 0; i < 4000; i++) {
+			CleanStaticVariables.cleanStaticVariables();
+			Population.makeRuletSelection();
+			Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
+			//		Crossover.getChidrenPairsTwoPointCrossover(Selection.parentsPairsForSelections);
+			//		Crossover.getChidrenPairsFlatCrossover(Selection.parentsPairsForSelections);
+			//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
+			Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
+			Mutation.RandomMutation(childrenListAfterCrossover);
+			NewPopulation.selectXromocomaInNewPopulation(
+					NewPopulation.formNewPopulation(Population.populationXromocoma, Mutation.childrenAfterMutation));
+		}
 	}
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ErrorCoeficients {
 	public static double MSE;                             //среднеквадратическая ошибка
-	public static double E;                             //среднеквадратическая ошибка
+	public static double E;
 
 	public static double getMSE(ArrayList<Double> initial, ArrayList<Double> forecasted) {
 		Double temp = 0.0;
