@@ -47,6 +47,7 @@ public class Population {
 		System.out.println("Значение фитнес-функций: ");
 		resultListOfFitness.forEach(System.out::println);
 		System.out.println("Общая сумма фитнес-функций: " + sumOfFitnessFunction);
+		System.out.println("Среднее значение родителей фитнес-функций: " + sumOfFitnessFunction / POPULATION);
 		double previous_probability = 0.0;
 		ArrayList<Double> probalities = new ArrayList<>();
 		for (int i = 0; i < resultListOfFitness.size(); i++) {
@@ -58,9 +59,10 @@ public class Population {
 			Random random = new Random();
 			double randomValue = random.nextDouble();
 			int idexOfChoosenXromocoma = selectIndividumForSelection(randomValue, probalities);
-			if (!selectedParentsForSelection.contains(populationXromocoma.get(idexOfChoosenXromocoma))) {
+		//	if (!selectedParentsForSelection.contains(populationXromocoma.get(idexOfChoosenXromocoma))) {
+			//TODO в списке отобранных родителей-хромосом могут быть дубликаты: чтобы кол-во  потомков равнялось кол-ву размеру исходной популяции
 				selectedParentsForSelection.add(populationXromocoma.get(idexOfChoosenXromocoma));
-			}
+		//	}
 			System.out.println("Fitness Function: " + new DecimalFormat("#0.0000").format(resultListOfFitness.get(idexOfChoosenXromocoma))
 					+ " рандомное число :" + new DecimalFormat("#0.0000").format(randomValue) + ";  номер сектора :  " +
 					idexOfChoosenXromocoma);

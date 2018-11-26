@@ -10,7 +10,8 @@ public class RunGAApplication {
 
 	public static void main(String[] args) throws Exception {
 		Population.makeRandomPopulation();
-		for (int i = 0; i < 4000; i++) {
+		//TODO кол-во итераций отбора детей
+		for (int i = 0; i < 20; i++) {
 			CleanStaticVariables.cleanStaticVariables();
 			Population.makeRuletSelection();
 			Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
@@ -19,8 +20,8 @@ public class RunGAApplication {
 			//    	Crossover.getChidrenPairsArithmaticalCrossover(Selection.parentsPairsForSelections);
 			Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);
 			Mutation.RandomMutation(childrenListAfterCrossover);
-			NewPopulation.selectXromocomaInNewPopulation(
-					NewPopulation.formNewPopulation(Population.populationXromocoma, Mutation.childrenAfterMutation));
+			NewPopulation.selectXromocomaInNewPopulation(NewPopulation.formNewPopulation(Population.populationXromocoma, Mutation.childrenAfterMutation));
+
 		}
 	}
 }

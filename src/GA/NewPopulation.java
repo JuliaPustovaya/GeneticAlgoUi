@@ -30,6 +30,13 @@ public class NewPopulation {
 		}
 		int j = 0;
 		System.out.println("Лучшие хромосомы: ");
+		double averageGhildFitnessValue = 0.0;
+		double sum = 0.0;
+		for (Double k : map.keySet()) {
+			sum += k;
+		}
+		averageGhildFitnessValue = sum / POPULATION;
+		System.out.println("Среднее значение потомков фитнесс-функции:  "+ averageGhildFitnessValue);
 		for (Double k : map.keySet()) {
 			if (j < POPULATION) {
 				selectedXromocomaInNewPopulation.add(new Xromocoma(map.get(k).getAlfa(), map.get(k).getBetta(), map.get(k).getGamma()));
