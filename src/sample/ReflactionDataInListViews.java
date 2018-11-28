@@ -15,7 +15,7 @@ public class ReflactionDataInListViews {
         ObservableList<String> list = FXCollections.observableArrayList();
         list.add("№    Реальне     Прогнозне");
         for (int i = 0; i < list1.size(); i++) {
-            list.add(i+1+ "     "+new DecimalFormat("#0.000").format(list1.get(i)) + "      " + new DecimalFormat("#0.000").format(list2.get(i)));
+            list.add(i + 1 + "     " + new DecimalFormat("#0.000").format(list1.get(i)) + "      " + new DecimalFormat("#0.000").format(list2.get(i)));
         }
         view.setItems(list);
 
@@ -26,7 +26,7 @@ public class ReflactionDataInListViews {
         ObservableList<String> list = FXCollections.observableArrayList();
         list.add(" №          Значення");
         for (int i = 0; i < list1.size(); i++) {
-            list.add(i+1 + "           " + new DecimalFormat("#0.000").format(list1.get(i).getYt()));
+            list.add(i + 1 + "           " + new DecimalFormat("#0.000").format(list1.get(i).getYt()));
         }
         view.setItems(list);
 

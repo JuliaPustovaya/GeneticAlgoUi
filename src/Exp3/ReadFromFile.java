@@ -25,11 +25,10 @@ public class ReadFromFile {
         for (int i = 0; i < list.size() - removableQuantityOfTimeSeriaForComparion; i++) {
             listForTimeSeria.add(list.get(i));
         }
-        for (int i = list.size() - removableQuantityOfTimeSeriaForComparion; i < list.size(); i++) {
+        for (int i = (list.size() - removableQuantityOfTimeSeriaForComparion); i < list.size(); i++) {
             listOfRealValue.add(list.get(i).getYt());
         }
         System.out.println("Размер исх.данных: " + listForTimeSeria.size() + "\nДанные: " + listForTimeSeria);
-        Collections.reverse(listOfRealValue);
         System.out.println("Исходные данные для сравнения : " + listOfRealValue);
         return listForTimeSeria;
     }

@@ -36,14 +36,14 @@
                 </Label>
                 <Label font="$x1" layoutX="260.0" layoutY="347.0" prefHeight="21.0" prefWidth="176.0" text="Формування параметрів" textAlignment="CENTER" />
                 <Label layoutX="198.0" layoutY="387.0" text="Довжина сезона: " />
-                <TextField id="textFieldL" layoutX="381.0" layoutY="409.0" prefWidth="83.0" />
+                <TextField id="textFieldL" fx:id="textFieldm" layoutX="381.0" layoutY="409.0" prefWidth="83.0" />
                 <Label layoutX="198.0" layoutY="409.0" text="Кільскість  прогнозних значень" />
                 <Label layoutX="198.0" layoutY="475.0" prefWidth="61.0" text="ALFA" />
-                <TextField layoutX="266.0" layoutY="472.0" prefWidth="83.0" />
+                <TextField fx:id="alfa" layoutX="265.0" layoutY="472.0" prefWidth="83.0" />
                 <Label layoutX="198.0" layoutY="502.0" prefWidth="61.0" text="BETTA" />
-                <TextField layoutX="264.0" layoutY="499.0" prefWidth="83.0" />
+                <TextField fx:id="betta" layoutX="264.0" layoutY="499.0" prefWidth="83.0" />
                 <Label layoutX="198.0" layoutY="534.0" prefWidth="61.0" text="GAMMA" />
-                <TextField layoutX="264.0" layoutY="529.0" prefWidth="83.0" />
+                <TextField fx:id="gamma" layoutX="264.0" layoutY="529.0" prefWidth="83.0" />
                 <ListView fx:id="list1IPredictedData" layoutX="852.0" layoutY="38.0" prefHeight="330.0" prefWidth="172.0" />
                 <Label font="$x1" layoutX="857.0" layoutY="11.0" prefWidth="150.0" text="Спрогнозованні дані" textAlignment="RIGHT" />
                 <Label font="$x1" layoutX="813.0" layoutY="393.0" prefWidth="172.0" text="Якість прогнозування" />
