@@ -15,7 +15,7 @@ public class RunApplication {
 	public static ArrayList<Double> forecastResult = new ArrayList<>();
 
 	public static void main(String[] args) throws Exception {
-		ReadFromFile.openFile(timeSeria, realResult);
+	//	ReadFromFile.openFile(timeSeria, realResult);
 		System.out.println("Alfa= " + ALFA + ", Betta=  " + BETTA + ", Gamma=  " + GAMMA + ", Season=  " + L);
 		InitialIndexis initialIndexis = new InitialIndexis();
 		initialIndexis.formS0();

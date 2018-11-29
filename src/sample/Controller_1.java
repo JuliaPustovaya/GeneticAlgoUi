@@ -34,12 +34,12 @@ public class Controller_1 implements Initializable {
     public Label Reflaction;
 
     @FXML
-    public void getForecast(ActionEvent ev) {
+    public void getInputCoefficientsForecast(ActionEvent ev) {
         updatedTimeSerias.clear();
         forecastResult.clear();
         L = Integer.parseInt(textFieldL.getText());
         try {
-            ReadFromFile.readDataFromFile(globalFilePath, timeSeria, realResult);
+ //           ReadFromFile.readDataFromFile(globalFilePath, timeSeria, realResult);
         } catch (Exception ex) {
         }
         System.out.println("Alfa= " + ALFA + ", Betta=  " + BETTA + ", Gamma=  " + GAMMA + ", Season=  " + L);
@@ -71,7 +71,7 @@ public class Controller_1 implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
-            ReadFromFile.openFile(timeSeria, realResult);
+       //     ReadFromFile.openFile(timeSeria, realResult);
         } catch (Exception ex) {
         }
         System.out.println("Alfa= " + ALFA + ", Betta=  " + BETTA + ", Gamma=  " + GAMMA + ", Season=  " + L);
