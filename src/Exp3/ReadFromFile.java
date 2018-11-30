@@ -24,7 +24,7 @@ public class ReadFromFile {
     public static void splitInitialTimeSeriaIntoRealandTimerseriaData(ArrayList<TimeSeria> list) {
         Controller.timeSeria.clear();
         Controller.realResult.clear();
-        int removableQuantityOfTimeSeriaForComparion = Coefficients.L;
+        int removableQuantityOfTimeSeriaForComparion = Coefficients.m;
         for (int i = 0; i < list.size() - removableQuantityOfTimeSeriaForComparion; i++) {
             Controller.timeSeria.add(list.get(i));
         }

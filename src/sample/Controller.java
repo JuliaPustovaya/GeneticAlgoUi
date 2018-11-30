@@ -10,6 +10,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.*;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -47,8 +48,8 @@ public class Controller implements Initializable {
         GAMMA = Double.parseDouble(gamma.getText());
         ReadFromFile.splitInitialTimeSeriaIntoRealandTimerseriaData(readedTimeSeriaFromFile);
         makeForecastByInput(lineChart, textFieldL, textFieldm, list1IPredictedData, alfa, betta, gamma);
-        mse1.setText(Double.toString(ErrorCoeficients.MSE));
-        mape1.setText(Double.toString(ErrorCoeficients.E));
+        mse1.setText(new DecimalFormat("#0.00").format(ErrorCoeficients.MSE));
+        mape1.setText(new DecimalFormat("#0.00").format(ErrorCoeficients.E));
 
     }
 
@@ -59,8 +60,9 @@ public class Controller implements Initializable {
         ReadFromFile.splitInitialTimeSeriaIntoRealandTimerseriaData(readedTimeSeriaFromFile);
         GA(lineChart);
         ReflactionDataInListViews.reflactDataIntoLists(list1IPredictedData, realResult, forecastResult);
-        mse1.setText(Double.toString(ErrorCoeficients.MSE));
-        mape1.setText(Double.toString(ErrorCoeficients.E));
+        mse1.setText(new DecimalFormat("#0.00").format(ErrorCoeficients.MSE));
+        mape1.setText(new DecimalFormat("#0.00").format(ErrorCoeficients.E));
+
 
     }
 
@@ -103,6 +105,7 @@ public class Controller implements Initializable {
     public static ArrayList<UpdatedTimeSeria> updatedTimeSerias = new ArrayList<UpdatedTimeSeria>();
     public static ArrayList<Double> realResult = new ArrayList<>();
     public static ArrayList<Double> forecastResult = new ArrayList<>();
+    public static int GLOBAL_I=0;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -168,7 +171,10 @@ public class Controller implements Initializable {
 
     public static void GA(LineChart lineChart1) {
         Population.makeRandomPopulation();
-        for (int i = 0; i < 10; i++) {
+  //      for (int i = 0; i < 10; i++)
+
+            while (MSE>1.0)
+            {
             Population.makeRuletSelection();
             Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);
             Crossover.getChidrenPairsDiscreteCrossover(Selection.parentsPairsForSelections);

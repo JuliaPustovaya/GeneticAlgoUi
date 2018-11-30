@@ -3,7 +3,7 @@ package Exp3;
 import java.util.ArrayList;
 
 public class ErrorCoeficients {
-    public static double MSE = 0.0;                             //среднеквадратическая ошибка
+    public static double MSE = 10.0;                             //среднеквадратическая ошибка
     public static double E = 0.0;
 
     public static double getMSE(ArrayList<Double> initial, ArrayList<Double> forecasted) {
