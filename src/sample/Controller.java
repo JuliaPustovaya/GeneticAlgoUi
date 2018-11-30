@@ -173,7 +173,7 @@ public class Controller implements Initializable {
         Population.makeRandomPopulation();
   //      for (int i = 0; i < 10; i++)
 
-            while (MSE>1.0)
+            while (MSE>3.0)
             {
             Population.makeRuletSelection();
             Selection.getParentsPairsForSelections(Population.selectedParentsForSelection);

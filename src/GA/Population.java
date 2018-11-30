@@ -8,6 +8,7 @@ import static sample.Controller.getFitness;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.TreeMap;
 
 public class Population {
     public static ArrayList<Xromocoma> populationXromocoma = new ArrayList<>();
@@ -88,4 +89,27 @@ public class Population {
         }
         return index;
     }
+
+    public void alternativeSelection(){
+        selectedParentsForSelection.clear();
+        ArrayList<Double> resultListOfFitness = new ArrayList<>();
+        double sumOfFitnessFunction = 0;
+        for (int i = 0; i < POPULATION; i++) {
+            resultListOfFitness.add(getFitness(populationXromocoma.get(i).getAlfa(), populationXromocoma.get(i).getBetta(),
+                    populationXromocoma.get(i).getGamma()));
+            sumOfFitnessFunction += resultListOfFitness.get(i);
+        }
+        System.out.println("Значение фитнес-функций: ");
+        TreeMap<Double,Xromocoma> map = new TreeMap<>();
+        for (int i = 0; i <resultListOfFitness.size() ; i++) {
+          map.put(resultListOfFitness.get(i),populationXromocoma.get(i));
+
+
+        }
+
+
+
+    }
+
+
 }
