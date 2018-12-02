@@ -20,7 +20,7 @@ public class ErrorCoeficients {
     public static double getE(ArrayList<Double> initial, ArrayList<Double> forecasted) {   //среднюю ошибку аппроксимации
         Double temp = 0.0;
         for (int i = 0; i < initial.size(); i++) {
-            double a = (Math.abs(initial.get(i) - forecasted.get(i)) / initial.get(i)) * 100;
+            double a = (Math.abs(initial.get(i) - forecasted.get(i)) / initial.get(i));
             temp = temp + a;
         }
         E = (1.0 / (double) initial.size()) * temp;
