@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0000999999975" prefWidth="962.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.version16_10_din_ryad.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <TabPane layoutX="14.0" layoutY="14.0" prefHeight="573.0" prefWidth="898.0" tabClosingPolicy="UNAVAILABLE">
+      <tabs>
+        <Tab text="Грфики">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="542.0" prefWidth="905.0">
+              <children>
+
+                <ScatterChart fx:id="chart1" layoutX="0.0" layoutY="38.0" prefHeight="243.0" prefWidth="428.0">
+                  <xAxis>
+                    <NumberAxis fx:id="x1" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis fx:id="y1" side="LEFT" />
+                  </yAxis>
+                </ScatterChart>
+                <ScatterChart fx:id="chart2" layoutX="439.0" layoutY="17.0" prefHeight="249.00006103515625" prefWidth="445.0" title="">
+                  <xAxis>
+                    <NumberAxis fx:id="x2" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis fx:id="y2" side="LEFT" />
+                  </yAxis>
+                </ScatterChart>
+                <ScatterChart fx:id="chart3" layoutX="14.0" layoutY="281.0" prefHeight="243.0" prefWidth="428.0">
+                  <xAxis>
+                    <NumberAxis fx:id="x3" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis fx:id="y3" side="LEFT" />
+                  </yAxis>
+                </ScatterChart>
+                <BarChart fx:id="gistogramma" layoutX="459.0" layoutY="267.0" prefHeight="261.0" prefWidth="428.0">
+                  <xAxis>
+                    <CategoryAxis side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis side="LEFT" />
+                  </yAxis>
+                </BarChart>
+                <!--     <BarChart fx:id="gistogramma" layoutX="444.0" layoutY="249.0" prefHeight="338.0" prefWidth="399.0">
+                  <xAxis>
+                    <NumberAxis  fx:id="gistogrammaX" side="BOTTOM" />
+                  </xAxis>
+                  <yAxis>
+                    <NumberAxis fx:id="gistogrammaY" side="LEFT" />
+                  </yAxis>
+                </BarChart>-->
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Характеристики и показатели">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <ListView fx:id="lv1" layoutX="33.0" layoutY="23.0" prefHeight="496.0" prefWidth="336.0" />
+                <ListView fx:id="lv2" layoutX="407.0" layoutY="23.0" prefHeight="496.0" prefWidth="336.0" />
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
