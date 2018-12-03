@@ -1,6 +1,7 @@
 package SA;
 
 import Exp3.TimeSeria;
+import SA.GA.RunAll;
 import javafx.stage.FileChooser;
 import sample.Controller;
 
@@ -14,6 +15,7 @@ import java.util.*;
 public class ReadDataFromFile {
 
     public static void ReadingDataInListFromFile(String filePath) {
+        RunAll.datafromfile.clear();
         Scanner s = null;
         try {
             s = new Scanner(new File(filePath));
