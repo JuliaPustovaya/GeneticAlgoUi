@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class RunAll {
     public static ArrayList<Double> datafromfile = new ArrayList<>();
-    public static double K_MSE = 0.0;
+    public static double K_MSE = 10.0;
 
     public static void main(String[] args) throws Exception {
         SA.SA_main.X_list_SA = new ArrayList();
@@ -27,10 +27,10 @@ public class RunAll {
             SA.poisk_next_forecasting_meaning(SA.nn_Evklid_SA, SA.Z_list_vector_history_evklidov, SA_main.X_list_SA_EVKLIDOV);
         }
         System.out.println("Forecasted: " + SA_main.X_list_SA_EVKLIDOV);
-        System.out.println(K_MSE(SA_main.X_list_SA_EVKLIDOV, datafromfile, K));
+        System.out.println(getK_MSE(SA_main.X_list_SA_EVKLIDOV, datafromfile, K));
     }
 
-    public static double K_MSE(ArrayList<Double> ar_origin, ArrayList<Double> ar_for, int k) {
+    public static double getK_MSE(ArrayList<Double> ar_origin, ArrayList<Double> ar_for, int k) {
         K_MSE = 0;
         double sum = 0;
         for (int i = ar_for.size() - 1; i >= ar_for.size() - k; i--) {

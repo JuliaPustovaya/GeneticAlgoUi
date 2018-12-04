@@ -20,7 +20,7 @@ public class SA_main {
     public TreeMap<Integer, Double> nn_Evklid_SA = new TreeMap<>();
     public static Integer I = 0;
 
-    public void poisk_next_forecasting_meaning(TreeMap<Integer, Double> nn, ArrayList<ArrayList<Double>> Z_list_vector_history, ArrayList<Double> LISTOFFORECASTINGMEANINGS) {
+    public  void poisk_next_forecasting_meaning(TreeMap<Integer, Double> nn, ArrayList<ArrayList<Double>> Z_list_vector_history, ArrayList<Double> LISTOFFORECASTINGMEANINGS) {
         ArrayList<Double> Ti_plus1_list = new ArrayList<>();
         double sum = 0;
         for (int i : nn.keySet()) {
